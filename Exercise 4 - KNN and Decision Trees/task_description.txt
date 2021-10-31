@@ -1,0 +1,31 @@
+For part 1 and 2 we are going to use a dataset that you will add data to yourself. Download the dataset  before you add your own scores to the document. Do that by copying the lines with my scores (nilstesd). Replace nilstesd with your own NTNUusername and edit the scores. If you don't know a dish you can delete that line. But you need to add scores for at least 10 dishes, otherwise we might get errors in the 2nd exercise. Do not add your own dishes!
+Part 1
+Create a diagram of choice that shows the average score for each dish. Attach the code and the graphic to the submission.
+Hint: after loading the dataset into df, use the following code to find the averages:
+mean = df.groupby(['Dish']).mean()
+labels = mean.index.values
+values = mean['Score'].values
+
+
+
+
+
+
+Now a *bar*-chart could be used.
+Part 2
+Who would you invite to dinner? To ensure a dinner party success you only want to invite people with a similar taste in food to yourself. Choose number of guests (k) and your k nearest "neighbors" using the techniques described in the KNN-lesson. Create a plot of your "neighborhood" using multidimensional scaling.
+Part 3
+Load the titanic dataset
+titanic.csv
+Create a classification tree that predicts whether a passenger should survive or not based on 'Sex', 'Age' and 'Class'.  To do this you need to convert the 'Sex'-column into a numeric value and you need to remove all the rows in the dataset where 'Age' is missing.
+Rows can be removed like this:
+
+df = df[df['Age'].notnull()]
+
+
+
+
+
+
+
+What is the classification precision in the tree? Can you create a significantly shallower tree that also predicts ok?
